@@ -4,7 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class DriverTest {
+public class ChromeTest {
 
     private static WebDriver chromeDriver;
 
@@ -61,5 +61,10 @@ public class DriverTest {
         chromeDriver.findElement(By.id("twotabsearchtextbox")).click();
         chromeDriver.findElement(By.id("twotabsearchtextbox")).sendKeys("leather shoes");
         chromeDriver.findElement(By.id("nav-search-submit-button")).click();
+    }
+
+    @Test(priority = 7)
+    public void openFacebook(){
+        chromeDriver.get("https://www.facebook.com/");
     }
 }
